@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Basic Discord Bot Example
 
 This is a fully customizable example Discord bot that you can add to your
@@ -130,3 +131,6 @@ This will also enable you to receive `guild.member` events for your bot.
 
 If you have any questions or feedback, please join our community Discord server 
 from the link in the top bar. You can also follow us on Twitter, [@AutocodeHQ](https://twitter.com/@AutocodeHQ).
+=======
+# goeglin-discord-bot
+>>>>>>> fcc3617ad9af77e956b79502164a8213bc4e4ab8
