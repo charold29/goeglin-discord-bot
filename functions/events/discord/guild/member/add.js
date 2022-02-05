@@ -2,7 +2,7 @@
 // typecontent: welcomeMessageContent.join('\n'),to display API autocomplete
 const lib = require('lib')({
   token: process.env.STDLIB_SECRET_TOKEN
-});
+})
 
 /*IMAGE*/
 // Importing canvas
@@ -26,8 +26,8 @@ ctx.strokeRect(0, 0, canvas.width, canvas.height)
 
 //--Layers needed for canvas--
 // 1. Background
-const background = await loadImage('https://i.postimg.cc/1R7vFz1K/fondo-Welcome-Aumentado.png');
-const sizeBackground = [canvas.width, canvas.height];
+const background = await loadImage('https://i.postimg.cc/1R7vFz1K/fondo-Welcome-Aumentado.png')
+const sizeBackground = [canvas.width, canvas.height]
 
 // 2. AvatarUser
 //Get the person's user info
@@ -37,13 +37,13 @@ let user = await lib.discord.users['@0.2.0'].retrieve({
 //Get avatar url
 let avatar_url = user.avatar ?
   `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png` :
-  `https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png`;
+  `https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png`
 
 const avatarImage = await loadImage(avatar_url)
 const sizeAvatar = [140, 140]
 
 // 3. Goeglin
-const goeglinImage = await loadImage('https://i.postimg.cc/QxjtZjyc/goeglin-Welcome.png');
+const goeglinImage = await loadImage('https://i.postimg.cc/QxjtZjyc/goeglin-Welcome.png')
 const sizeGoeglin = [410, 306]
 
 //--Overlay files onto our canvas--
@@ -64,14 +64,14 @@ ctx.fill()
 
 //Adjust text width 
 const applyText = (canvas, text) => {
-  const context = canvas.getContext('2d');
-  let fontSize = 66;
+  const context = canvas.getContext('2d')
+  let fontSize = 66
 
   do {
-    context.font = `${fontSize -=10}px "Arista"`;
+    context.font = `${fontSize -=10}px "Arista"`
   } while (context.measureText(text).width > canvas.width - 400);
 
-  return context.font;
+  return context.font
 }
 
 const usernameText = context.params.event.user.username
@@ -80,7 +80,7 @@ ctx.font = `56px "Arista"`
 ctx.fillStyle = "#ffffff"
 ctx.textAlign = "center"
 ctx.fillText("Welcome to Goeglins World!", 400, 80)
-ctx.font = applyText(canvas, usernameText);
+ctx.font = applyText(canvas, usernameText)
 ctx.fillText(usernameText, 220, 340)
 
 // Draw Circle
