@@ -34,6 +34,8 @@ You can find it under: `functions/events/discord/command/member-count.js`.
 
 This part was developed with a source called [Arista 2.0](https://www.npmjs.com/package/goeglin-font), the use of the [Canvas](https://www.npmjs.com/package/canvas) library for the creation of the welcome image, and some images with the theme of the project. Here a sample:
 
+You can find it under: `functions/events/discord/guild/member/add.js`.
+
 <img src= "./readme/gallery/welcomeSample.png">
 
 
