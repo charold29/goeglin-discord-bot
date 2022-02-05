@@ -1,0 +1,10 @@
+{
+  "name": "basic-discord-example",
+  "author": "Jacob Lee",
+  "publish": false,
+  "dependencies": {
+    "lib": "latest",
+    "canvas": "^2.9.0",
+    "goeglin-font": "^1.0.0"
+  }
+}
